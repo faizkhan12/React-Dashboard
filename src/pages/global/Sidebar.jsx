@@ -63,7 +63,7 @@ const Sidebar = () => {
         },
       }}
     >
-      <ProSidebar>
+      <ProSidebar collapsed={isCollapsed}>
         <Menu iconShape="square">
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
@@ -83,7 +83,7 @@ const Sidebar = () => {
                 <Typography variant="h3" colors={colors.gray[100]}>
                   ADMINS
                 </Typography>
-                <IconButton>
+                <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
                 </IconButton>
               </Box>
